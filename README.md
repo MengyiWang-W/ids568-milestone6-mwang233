@@ -123,19 +123,29 @@ Task
 ## 10. Repository Structure
 
 rag_pipeline.py
+
 rag_eval_results.json
+
 chunking_experiment_results.json
+
 rag_evaluation_report.md
+
 rag_pipeline_diagram.md
 
 agent_controller.py
+
 agent_run_summary.json
+
 agent_report.md
+
 agent_traces/
 
 data/
+
 requirements.txt
+
 README.md
+
 .gitignore
 
 ## 11. Model Deployment Notes
