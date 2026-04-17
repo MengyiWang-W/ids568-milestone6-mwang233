@@ -1,0 +1,25 @@
+Definition:
+Retrieval-Augmented Generation (RAG) is an architecture that enhances large language models by retrieving relevant external documents at inference time instead of relying solely on pre-trained knowledge.
+
+Key Components:
+- Document chunking: splitting documents into smaller segments
+- Embedding model: converting text into vector representations
+- Vector database: storing embeddings for efficient similarity search
+- Retriever: selecting top-k relevant chunks
+- Generator: producing answers based on retrieved context
+
+Advantages:
+- Access to up-to-date information
+- Ability to incorporate proprietary or domain-specific data
+- Reduced hallucination compared to pure LLM generation
+
+Limitations:
+- Strong dependence on retrieval quality
+- Errors in retrieval propagate to generation
+- Context window limits may restrict usable information
+
+Example Scenario:
+If a user asks about a specific regulation not present in the training data, RAG can retrieve the relevant document and generate a grounded response.
+
+Failure Case:
+If the retriever fails to find the relevant chunk, the model may generate incomplete or incorrect answers even when the knowledge exists in the corpus.

@@ -1,0 +1,29 @@
+[
+  {
+    "chunk_size": 256,
+    "overlap": 50,
+    "avg_precision_at_k": 0.3333,
+    "avg_recall_at_k": 0.5,
+    "avg_retrieval_latency_sec": 0.0226,
+    "avg_generation_latency_sec": 73.0063,
+    "avg_end_to_end_latency_sec": 73.0288
+  },
+  {
+    "chunk_size": 512,
+    "overlap": 80,
+    "avg_precision_at_k": 0.4444,
+    "avg_recall_at_k": 0.6667,
+    "avg_retrieval_latency_sec": 0.3566,
+    "avg_generation_latency_sec": 434.9039,
+    "avg_end_to_end_latency_sec": 435.2605
+  },
+  {
+    "chunk_size": 1024,
+    "overlap": 120,
+    "avg_precision_at_k": 0.3333,
+    "avg_recall_at_k": 0.5,
+    "avg_retrieval_latency_sec": 0.1947,
+    "avg_generation_latency_sec": 318.8697,
+    "avg_end_to_end_latency_sec": 319.0643
+  }
+]

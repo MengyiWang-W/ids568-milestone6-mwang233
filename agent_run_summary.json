@@ -1,0 +1,72 @@
+[
+  {
+    "task_id": 1,
+    "task": "Explain what retrieval-augmented generation is and summarize its main benefit.",
+    "selected_tool": "retriever_tool",
+    "failure_type": "generation_error",
+    "total_latency_sec": 602.0896
+  },
+  {
+    "task_id": 2,
+    "task": "Summarize the main components of a RAG system.",
+    "selected_tool": "retriever_tool",
+    "failure_type": "none",
+    "total_latency_sec": 470.0886
+  },
+  {
+    "task_id": 3,
+    "task": "Explain the role of embeddings in RAG.",
+    "selected_tool": "retriever_tool",
+    "failure_type": "none",
+    "total_latency_sec": 184.3872
+  },
+  {
+    "task_id": 4,
+    "task": "Compare the advantages and limitations of RAG.",
+    "selected_tool": "retriever_tool",
+    "failure_type": "none",
+    "total_latency_sec": 133.9302
+  },
+  {
+    "task_id": 5,
+    "task": "Identify common retrieval failure modes in RAG.",
+    "selected_tool": "retriever_tool",
+    "failure_type": "none",
+    "total_latency_sec": 134.0634
+  },
+  {
+    "task_id": 6,
+    "task": "Explain why RAG can still fail even when relevant information exists.",
+    "selected_tool": "retriever_tool",
+    "failure_type": "none",
+    "total_latency_sec": 137.3224
+  },
+  {
+    "task_id": 7,
+    "task": "Summarize the conflicting views on whether RAG eliminates hallucination.",
+    "selected_tool": "retriever_tool",
+    "failure_type": "none",
+    "total_latency_sec": 137.922
+  },
+  {
+    "task_id": 8,
+    "task": "Explain how architecture choices affect groundedness in RAG.",
+    "selected_tool": "retriever_tool",
+    "failure_type": "none",
+    "total_latency_sec": 189.3721
+  },
+  {
+    "task_id": 9,
+    "task": "Describe how an agent should use retrieval in a multi-step workflow.",
+    "selected_tool": "retriever_tool",
+    "failure_type": "none",
+    "total_latency_sec": 310.7505
+  },
+  {
+    "task_id": 10,
+    "task": "Give a short evidence-grounded explanation of why retrieval quality matters for generation quality.",
+    "selected_tool": "retriever_tool",
+    "failure_type": "none",
+    "total_latency_sec": 110.1321
+  }
+]

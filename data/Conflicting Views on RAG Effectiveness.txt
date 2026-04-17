@@ -1,0 +1,20 @@
+Claim 1:
+RAG significantly reduces hallucination because it grounds model outputs in retrieved factual documents.
+
+Claim 2:
+RAG does not eliminate hallucination entirely, especially when retrieval fails or retrieves irrelevant documents.
+
+Supporting Argument:
+Even when relevant documents exist in the corpus, poor chunking or similarity search errors can cause the system to retrieve incorrect context.
+
+Example:
+If a query is ambiguous, the retriever may select semantically similar but incorrect chunks, leading to misleading answers.
+
+Contradiction:
+Some studies claim that increasing top-k always improves performance, while others show that larger k introduces noise and reduces answer quality.
+
+Edge Case:
+When no relevant information exists in the corpus, the model may still generate an answer instead of admitting uncertainty.
+
+Implication:
+The effectiveness of RAG depends heavily on retrieval quality, chunking strategy, and prompt design rather than the LLM alone.
