@@ -33,11 +33,11 @@ pip install -r requirements.txt
 
 Download from: https://ollama.com
 
-Step 3 — Pull model
+### Step 3 — Pull model
 ```bash
 ollama pull qwen2.5:7b
 ```
-Step 4 — Start server
+### Step 4 — Start server
 ```bash
 ollama serve
 ```
