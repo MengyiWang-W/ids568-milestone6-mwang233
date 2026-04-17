@@ -35,27 +35,30 @@ All outputs are generated from **real local execution** using a **7B open-weight
 ### Step 1 — Install dependencies
 ```bash
 pip install -r requirements.txt
-Step 2 — Install Ollama
+```
+### Step 2 — Install Ollama
+Download from:https://ollama.com
 
-Download from:
-https://ollama.com
-
-Step 3 — Pull model
+### Step 3 — Pull model
 ollama pull qwen2.5:7b
-Step 4 — Start server
+
+### Step 4 — Start server
 ollama serve
-4. Run Part 1: RAG Pipeline
+
+### 4. Run Part 1: RAG Pipeline
 python rag_pipeline.py
 Outputs
 rag_eval_results.json
 chunking_experiment_results.json
-5. Final RAG Configuration
+
+### 5. Final RAG Configuration
 Chunk size: 512
 Overlap: 80
 Top-k: 3
 Vector index: FAISS
 Generator: qwen2.5:7b
-6. Part 1 Results (Actual Run)
+
+### 6. Part 1 Results (Actual Run)
 Precision@k: 0.5667
 Recall@k: 0.7667
 Retrieval latency: 0.0207s
@@ -65,9 +68,11 @@ Key Observations
 Retrieval is fast and not a bottleneck
 Generation dominates latency
 Recall > Precision → retrieval introduces some noise
-7. Run Part 2: Agent Controller
+
+### 7. Run Part 2: Agent Controller
 python agent_controller.py
-8. Agent Outputs
+
+### 8. Agent Outputs
 Generated Files
 agent_run_summary.json
 agent_traces/task_01.json ... task_10.json
@@ -78,7 +83,8 @@ routing reason
 retrieved chunk IDs
 final answer
 latency
-9. Part 2 Results (Actual Run)
+
+### 9. Part 2 Results (Actual Run)
 Tool Usage
 10/10 tasks used retriever_tool
 Failures
@@ -87,7 +93,8 @@ Latency
 Fastest: 110.1321s
 Slowest: 602.0896s
 Average: ~241.01s
-10. Architecture Overview
+
+### 10. Architecture Overview
 RAG Pipeline
 
 Documents
@@ -107,7 +114,7 @@ Task
 → Answer
 → Trace Logging
 
-11. Repository Structure
+### 11. Repository Structure
 rag_pipeline.py
 rag_eval_results.json
 chunking_experiment_results.json
@@ -122,7 +129,8 @@ agent_traces/
 data/
 requirements.txt
 README.md
-12. Model Deployment Notes
+
+### 12. Model Deployment Notes
 Model: qwen2.5:7b
 Size: 7B
 Serving: Ollama local server
@@ -130,19 +138,22 @@ Inference: local CPU
 Observed Performance
 Typical generation latency: 100–600 seconds
 Performance varies depending on prompt length and retrieved context size
-13. Limitations
+
+### 13. Limitations
 Local LLM inference is slow and unstable
 No reranking after retrieval
 Small course-specific corpus
 Simple agent routing policy
 Evaluation uses source-level labels
-14. Failure Analysis Summary
+
+### 14. Failure Analysis Summary
 One task failed due to LLM generation timeout (600s)
 Retrieval succeeded but generation did not complete
 Demonstrates separation between:
 retrieval success
 generation failure
-15. Reproducibility
+
+### 15. Reproducibility
 pip install -r requirements.txt
 ollama pull qwen2.5:7b
 ollama serve
@@ -151,7 +162,7 @@ python agent_controller.py
 
 All outputs can be reproduced locally.
 
-16. Notes
+### 16. Notes
 No mock outputs are used
 No proprietary APIs are used
 All results come from real execution
