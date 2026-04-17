@@ -1,4 +1,3 @@
-
 ```md
 # RAG Pipeline Diagram
 
@@ -38,3 +37,19 @@ Documents (data/)
     v
 [Grounded Answer]
 (with chunk citations)
+```
+
+### Key Decision Points
+Choose chunk size and overlap
+Choose top-k retrieval size
+Decide whether retrieved evidence is sufficient for grounded generation
+
+
+### Data Transformations
+Raw documents → text
+Text → chunks
+Chunks → embeddings
+Query → query embedding
+Query embedding + FAISS → retrieved chunks
+Retrieved chunks + query → grounded prompt
+Prompt → final answer
